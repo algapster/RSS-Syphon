@@ -136,6 +136,7 @@ keywords = {
         "windows 10",
         "windows 11",
         "zoom",
-        "aruba"
+        "aruba",
+        "juniper"
     ]
 }
