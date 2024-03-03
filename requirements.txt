@@ -1,0 +1,9 @@
+requests
+feedparser
+asyncio
+aiohttp
+slack_sdk
+splunk-sdk
+bs4
+lxml
+azure-functions
