@@ -19,8 +19,6 @@ rss_feed_list = {
         
     ],
     "cve": [
-        {"name": "nist-analyzed", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss-analyzed.xml"},
-        {"name": "nist-upcoming", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml"},
         {"name": "zdi-upcoming", "url": "https://www.zerodayinitiative.com/rss/upcoming/"},
         {"name": "zdi-analyzed", "url": "https://www.zerodayinitiative.com/rss/published/"},
         {"name": "vulners", "url": "https://vulners.com/rss.xml"},
