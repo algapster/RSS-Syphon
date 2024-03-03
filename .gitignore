@@ -1,4 +1,5 @@
 __pycache__
-__azure_**
+__azure_*
+__blobstoarage__\*
 .python_packages
 .venv
