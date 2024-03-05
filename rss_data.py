@@ -40,8 +40,6 @@ keywords = {
     "static_keywords": [
         "adobe",
         "airmagnet survey ",
-        "alienvault",
-        "amazon workpsace",
         "amazon",
         "android",
         "apple",
@@ -61,7 +59,6 @@ keywords = {
         "connectwise",
         "crash plan",
         "debian",
-        "decisions",
         "defender",
         "dell",
         "designcad",
@@ -76,9 +73,6 @@ keywords = {
         "fortiswitch",
         "google",
         "global protect",
-        "globalprotect",
-        "google ",
-        "horizon",
         "hp",
         "hubspot",
         "ibm",
@@ -102,15 +96,13 @@ keywords = {
         "meraki",
         "microsoft",
         "mozilla firefox",
-        "ms defender",
-        "ms office",
+        "defender",
+        "office",
         "nessus",
         "netapp",
-        "none",
         "notepad++",
         "office365",
         "okta",
-        "overland",
         "palo alto",
         "parallels",
         "paycor",
@@ -141,7 +133,9 @@ keywords = {
         "workspace",
         "yubikey",
         "zoom",
-        "zscaler"
+        "zscaler",
+        "openai",
+        "wmvare"
 
 
     ]
