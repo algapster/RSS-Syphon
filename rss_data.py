@@ -21,7 +21,6 @@ rss_feed_list = {
     "cve": [
         {"name": "zdi-upcoming", "url": "https://www.zerodayinitiative.com/rss/upcoming/"},
         {"name": "zdi-analyzed", "url": "https://www.zerodayinitiative.com/rss/published/"},
-        {"name": "vulners", "url": "https://vulners.com/rss.xml"},
         {"name": "seclists-bugtraq", "url": "https://seclists.org/rss/bugtraq.rss"},
         {"name": "seclists-full", "url": "https://seclists.org/rss/fulldisclosure.rss"},
         {"name": "seclists-oss", "url": "https://seclists.org/rss/oss-sec.rss"},
