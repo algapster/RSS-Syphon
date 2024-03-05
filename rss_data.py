@@ -56,7 +56,6 @@ keywords = {
         "centrify",
         "checkmk",
         "chrome",
-        "chrome",
         "cisco",
         "code42",
         "connectwise",
