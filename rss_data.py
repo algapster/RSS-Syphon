@@ -26,8 +26,6 @@ rss_feed_list = {
         {"name": "seclists-full", "url": "https://seclists.org/rss/fulldisclosure.rss"},
         {"name": "seclists-oss", "url": "https://seclists.org/rss/oss-sec.rss"},
         {"name": "inthewild", "url": "https://raw.githubusercontent.com/gmatuz/inthewilddb/master/rss.xml"},
-        {"name": "tenable", "url": "https://www.tenable.com/cve/feeds?sort=newest"},
-        {"name": "tenable-updated", "url": "https://www.tenable.com/cve/feeds?sort=updated"},
         {"name": "center-for-internet-security", "url": "https://www.cisecurity.org/feed/advisories"}
     ]
 }
@@ -120,7 +118,6 @@ keywords = {
         "sonicwall",
         "supermicro",
         "synnex",
-        "tenable",
         "ubuntu",
         "vcenter",
         "veeam",
