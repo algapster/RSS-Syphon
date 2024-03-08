@@ -27,7 +27,6 @@ rss_feed_list = {
         {"name": "inthewild", "url": "https://raw.githubusercontent.com/gmatuz/inthewilddb/master/rss.xml"},
         {"name": "center-for-internet-security", "url": "https://www.cisecurity.org/feed/advisories"},
         {"name": "National Vulnerability Database by NIST", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss-analyzed.xml"},
-        {"name": "US-CERT Alerts", "url": "https://www.us-cert.gov/ncas/alerts.xml"},
         {"name": "Microsoft Security Advisories", "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/rss"},
         {"name": "SANS Internet Storm Center (ISC)", "url": " https://isc.sans.edu/rssfeed.xml"},
         {"name": "CERT Coordination Center (CERT/CC) Vulnerability Notes", "url": " https://www.kb.cert.org/vulfeed"},
