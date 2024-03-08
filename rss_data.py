@@ -31,7 +31,6 @@ rss_feed_list = {
         {"name": "Microsoft Security Advisories", "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/rss"},
         {"name": "SANS Internet Storm Center (ISC)", "url": " https://isc.sans.edu/rssfeed.xml"},
         {"name": "CERT Coordination Center (CERT/CC) Vulnerability Notes", "url": " https://www.kb.cert.org/vulfeed"},
-        {"name": "SecurityFocus Vulnerabilities", "url": "https://www.securityfocus.com/rss/vulnerabilities.xml"},
         {"name": "IBM X-Force Exchange", "url": "https://exchange.xforce.ibmcloud.com/rss"}
 
     ]
