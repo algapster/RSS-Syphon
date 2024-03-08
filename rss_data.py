@@ -25,12 +25,20 @@ rss_feed_list = {
         {"name": "seclists-full", "url": "https://seclists.org/rss/fulldisclosure.rss"},
         {"name": "seclists-oss", "url": "https://seclists.org/rss/oss-sec.rss"},
         {"name": "inthewild", "url": "https://raw.githubusercontent.com/gmatuz/inthewilddb/master/rss.xml"},
-        {"name": "center-for-internet-security", "url": "https://www.cisecurity.org/feed/advisories"}
+        {"name": "center-for-internet-security", "url": "https://www.cisecurity.org/feed/advisories"},
+        {"name": "National Vulnerability Database by NIST", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss-analyzed.xml"},
+        {"name": "US-CERT Alerts", "url": "https://www.us-cert.gov/ncas/alerts.xml"},
+        {"name": "Microsoft Security Advisories", "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/rss"},
+        {"name": "SANS Internet Storm Center (ISC)", "url": " https://isc.sans.edu/rssfeed.xml"},
+        {"name": "CERT Coordination Center (CERT/CC) Vulnerability Notes", "url": " https://www.kb.cert.org/vulfeed"},
+        {"name": "SecurityFocus Vulnerabilities", "url": "https://www.securityfocus.com/rss/vulnerabilities.xml"},
+        {"name": "IBM X-Force Exchange", "url": "https://exchange.xforce.ibmcloud.com/rss"}
+
     ]
 }
 
 keywords = {
-    "last_modified": "2024-02-29",
+    "last_modified": "2024-03-07",
     "ignored": [
         "hiring"
     ],
