@@ -31,7 +31,6 @@ rss_feed_list = {
         {"name": "nedwill’s security blog", "url": "https://nedwill.github.io/blog/feed.xml"},
         {"name": "Hanno's blog -", "url": "https://blog.hboeck.de/feeds/index.rss2"},
         {"name": "Active Directory Security", "url": "https://adsecurity.org/?feed=rss2"},
-        {"name": "Mogozobo", "url": "https://www.mogozobo.com/?feed=rss2"},
         {"name": "DigiNinja", "url": "https://digi.ninja/rss.xml"},
         {"name": "enigma0x3", "url": "https://enigma0x3.net/feed/"},
         {"name": "ZeroSec - Adventures In Information Security", "url": "https://blog.zsec.uk/rss/"},
