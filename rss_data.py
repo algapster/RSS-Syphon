@@ -29,7 +29,6 @@ rss_feed_list = {
         {"name": "SANS Internet Storm Center (ISC)", "url": " https://isc.sans.edu/rssfeed.xml"},
         {"name": "CERT Coordination Center (CERT/CC) Vulnerability Notes", "url": " https://www.kb.cert.org/vulfeed"},
         {"name": "nedwill’s security blog", "url": "https://nedwill.github.io/blog/feed.xml"},
-        {"name": "Realmode Labs - Medium", "url": "https://medium.com/feed/realmodelabs"},
         {"name": "Hanno's blog -", "url": "https://blog.hboeck.de/feeds/index.rss2"},
         {"name": "Active Directory Security", "url": "https://adsecurity.org/?feed=rss2"},
         {"name": "Mogozobo", "url": "https://www.mogozobo.com/?feed=rss2"},
