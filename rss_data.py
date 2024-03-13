@@ -60,14 +60,12 @@ rss_feed_list = {
   
     ],
     "cve": [
-        {"name": "zdi-upcoming", "url": "https://www.zerodayinitiative.com/rss/upcoming/"},
         {"name": "zdi-analyzed", "url": "https://www.zerodayinitiative.com/rss/published/"},
         {"name": "seclists-bugtraq", "url": "https://seclists.org/rss/bugtraq.rss"},
         {"name": "seclists-full", "url": "https://seclists.org/rss/fulldisclosure.rss"},
         {"name": "seclists-oss", "url": "https://seclists.org/rss/oss-sec.rss"},
         {"name": "inthewild", "url": "https://raw.githubusercontent.com/gmatuz/inthewilddb/master/rss.xml"},
         {"name": "center-for-internet-security", "url": "https://www.cisecurity.org/feed/advisories"},
-        {"name": "Microsoft Security Advisories", "url": "https://portal.msrc.microsoft.com/en-us/security-guidance/rss"},
         {"name": "SANS Internet Storm Center (ISC)", "url": " https://isc.sans.edu/rssfeed.xml"},
         {"name": "CERT Coordination Center (CERT/CC) Vulnerability Notes", "url": " https://www.kb.cert.org/vulfeed"},
         {"name": "IBM X-Force Exchange", "url": "https://exchange.xforce.ibmcloud.com/rss"},
