@@ -39,7 +39,6 @@ rss_feed_list = {
         {"name": "Blog of Osanda", "url": "https://osandamalith.com/feed/"},
         {"name": "The Exploit Laboratory", "url": "https://blog.exploitlab.net/feeds/posts/default"},
         {"name": "Linux Audit", "url": "https://linux-audit.com/feed/"},
-        {"name": "markitzeroday.com", "url": "https://markitzeroday.com/feed.xml"},
         {"name": "The Human Machine Interface", "url": "https://h0mbre.github.io/feed.xml"},
         {"name": "Trail of Bits Blog", "url": "https://blog.trailofbits.com/feed/"},
         {"name": "Exodus Intelligence", "url": "https://blog.exodusintel.com/feed/"},
