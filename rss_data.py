@@ -20,7 +20,6 @@ rss_feed_list = {
         {"name": "Wired ", "url": "https://www.wired.com/feed/category/security/latest/rss"},
         {"name": "News ≈ Packet Storm", "url": "https://rss.packetstormsecurity.com/news/"},
         {"name": "zdnet.com", "url": "https://www.zdnet.com/topic/security/rss.xml"},
-        {"name": "ars", "url": "https://feeds.arstechnica.com/arstechnica/index/"},
         {"name": "threatpost", "url": "https://threatpost.com/feed/"},
         {"name": "arxiv", "url": "https://export.arxiv.org/api/query?search_query=cat:cs.CR&sortBy=submittedDate&sortOrder=descending&max_results=50"},
         {"name": "packetstormsecurity", "url": "https://rss.packetstormsecurity.com/files/"},
