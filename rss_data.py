@@ -17,7 +17,6 @@ Feeds and keywords should be reviewed periodically and updated as needed
 rss_feed_list = {
     "news": [
         {"name": "ExploitDev", "url": "https://www.reddit.com/r/exploitdev/new.rss"},
-        {"name": "netsec ", "url": ""},
         {"name": "Latest topics", "url": "https://www.reddit.com/r/netsec/new.rss"},
         {"name": "websecurityresearch", "url": "https://www.reddit.com/r/websecurityresearch/new.rss"},
         {"name": "ReverseEngineering", "url": "https://www.reddit.com/r/ReverseEngineering/new.rss"},
