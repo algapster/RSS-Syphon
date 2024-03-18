@@ -16,9 +16,26 @@ Feeds and keywords should be reviewed periodically and updated as needed
 
 rss_feed_list = {
     "news": [
-        {"name": "Bleepingcomputer", "url": "https://www.bleepingcomputer.com/feed/"}
+        {"name": "Bleepingcomputer", "url": "https://www.bleepingcomputer.com/feed/"},
+        {"name": "Wired ", "url": "https://www.wired.com/feed/category/security/latest/rss"},
+        {"name": "News ≈ Packet Storm", "url": "https://rss.packetstormsecurity.com/news/"},
+        {"name": "zdnet.com", "url": "https://www.zdnet.com/topic/security/rss.xml"},
+        {"name": "ars", "url": "https://feeds.arstechnica.com/arstechnica/index/"},
+        {"name": "threatpost", "url": "https://threatpost.com/feed/"},
+        {"name": "arxiv", "url": "https://export.arxiv.org/api/query?search_query=cat:cs.CR&sortBy=submittedDate&sortOrder=descending&max_results=50"},
+        {"name": "packetstormsecurity", "url": "https://rss.packetstormsecurity.com/files/"},
+        {"name": "msrc.microsoft", "url": "https://msrc.microsoft.com/blog/feed"}
     ],
     "cve": [
+        {"name": "cvefeed_high", "url": "https://cvefeed.io/rssfeed/severity/high.xml"},
+        {"name": "cvefeed", "url": "https://cvefeed.io/rssfeed/latest.xml"},
+        {"name": "tenable", "url": "https://www.tenable.com/cve/feeds?sort=newest"},
+        {"name": "esecurityplanet", "url": "https://www.esecurityplanet.com/feed/"},
+        {"name": "helpnetsecurity", "url": "https://www.helpnetsecurity.com/feed/"},
+        {"name": "secpod", "url": "https://www.secpod.com/blog/feed/"},
+        {"name": "tacsecurity", "url": "https://tacsecurity.com/feed/"},
+        {"name": "securityboulevard", "url": "https://securityboulevard.com/feed/"},
+        {"name": "Medium ", "url": "https://medium.com/feed/realmodelabs"},
         {"name": "seclists-full", "url": "https://seclists.org/rss/fulldisclosure.rss"},
         {"name": "seclists-oss", "url": "https://seclists.org/rss/oss-sec.rss"},
         {"name": "inthewild", "url": "https://raw.githubusercontent.com/gmatuz/inthewilddb/master/rss.xml"},
@@ -58,7 +75,7 @@ rss_feed_list = {
 }
 
 keywords = {
-    "last_modified": "2024-03-07",
+    "last_modified": "2024-03-18",
     "ignored": [
         "hiring"
     ],
