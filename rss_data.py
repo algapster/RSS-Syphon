@@ -22,13 +22,12 @@ rss_feed_list = {
         {"name": "websecurityresearch", "url": "https://www.reddit.com/r/websecurityresearch/new.rss"},
         {"name": "ReverseEngineering", "url": "https://www.reddit.com/r/ReverseEngineering/new.rss"},
         {"name": "lowlevel", "url": "https://www.reddit.com/r/lowlevel/new.rss"},
+     
         {"name": "Latest topics", "url": "https://community.disclose.io/latest.rss"}
 
   
     ],
     "cve": [
-        {"name": "zdi-analyzed", "url": "https://www.zerodayinitiative.com/rss/published/"},
-        {"name": "seclists-bugtraq", "url": "https://seclists.org/rss/bugtraq.rss"},
         {"name": "seclists-full", "url": "https://seclists.org/rss/fulldisclosure.rss"},
         {"name": "seclists-oss", "url": "https://seclists.org/rss/oss-sec.rss"},
         {"name": "inthewild", "url": "https://raw.githubusercontent.com/gmatuz/inthewilddb/master/rss.xml"},
