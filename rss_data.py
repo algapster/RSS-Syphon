@@ -23,8 +23,6 @@ rss_feed_list = {
         {"name": "ReverseEngineering", "url": "https://www.reddit.com/r/ReverseEngineering/new.rss"},
         {"name": "lowlevel", "url": "https://www.reddit.com/r/lowlevel/new.rss"},
         {"name": "Latest topics", "url": "https://community.disclose.io/latest.rss"}
-
-  
     ],
     "cve": [
         {"name": "seclists-full", "url": "https://seclists.org/rss/fulldisclosure.rss"},
@@ -62,7 +60,6 @@ rss_feed_list = {
         {"name": "NCC Group Research", "url": "https://research.nccgroup.com/feed/"},
         {"name": "Alexander Popov", "url": "https://a13xp0p0v.github.io/feed.xml"},
         {"name": "Windows Internals Blog", "url": "https://windows-internals.com/feed/"}
-
     ]
 }
 
