@@ -107,7 +107,6 @@ keywords = {
         "defender",
         "dell",
         "designcad",
-        "digicert",
         "docusign",
         "duo",
         "fortianalyzer",
