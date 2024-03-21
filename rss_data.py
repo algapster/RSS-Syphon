@@ -38,7 +38,6 @@ rss_feed_list = {
         {"name": "helpnetsecurity", "url": "https://www.helpnetsecurity.com/feed/"},
         {"name": "secpod", "url": "https://www.secpod.com/blog/feed/"},
         {"name": "tacsecurity", "url": "https://tacsecurity.com/feed/"},
-        {"name": "securityboulevard", "url": "https://securityboulevard.com/feed/"},
         {"name": "Medium ", "url": "https://medium.com/feed/realmodelabs"},
         {"name": "seclists-full", "url": "https://seclists.org/rss/fulldisclosure.rss"},
         {"name": "seclists-oss", "url": "https://seclists.org/rss/oss-sec.rss"},
