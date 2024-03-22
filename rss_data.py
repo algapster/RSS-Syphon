@@ -26,7 +26,6 @@ rss_feed_list = {
         {"name": "portswigger", "url": "https://portswigger.net/daily-swig/rss"},
         {"name": "rapid7", "url": "https://blog.rapid7.com/rss/"},
         {"name": "checkpoint", "url": "https://research.checkpoint.com/feed/"},
-        {"name": "hackerone", "url": "https://www.hackerone.com/blog.rss"},
         {"name": "isc.sans.edu", "url": "https://isc.sans.edu/rssfeed_full.xml"},
         {"name": "msrc.microsoft", "url": "https://msrc.microsoft.com/blog/feed"}
     ],
