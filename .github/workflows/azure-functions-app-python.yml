@@ -20,10 +20,11 @@ name: Deploy Python project to Azure Function App
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "development"]
 
 env:
   AZURE_FUNCTIONAPP_NAME: 'RSS-syphon'   # set this to your function app name on Azure
+  AZURE_FUNCTIONAPP_NAME_DEV: 'RSS-syphon-dev'   # set this to your function app name on Azure
   AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'       # set this to the path to your function app project, defaults to the repository root
   PYTHON_VERSION: '3.11'                     # set this to the python version to use (e.g. '3.6', '3.7', '3.8')
 
@@ -53,12 +54,24 @@ jobs:
         pip install -r requirements.txt --target=".python_packages/lib/site-packages"
         popd
 
-    - name: 'Run Azure Functions Action'
+    - name: 'Run Azure Functions Action Prod'
+      if: github.ref == 'refs/head/main'
       uses: Azure/functions-action@v1
-      id: fa
+      id: fa-prd
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
         publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }} # Remove publish-profile to use Azure RBAC
+        scm-do-build-during-deployment: true
+        enable-oryx-build: true
+
+    - name: 'Run Azure Functions Action Dev'
+      if: github.ref == 'refs/head/development'
+      uses: Azure/functions-action@v1
+      id: fa-dev
+      with:
+        app-name: ${{ env.AZURE_FUNCTIONAPP_NAME_DEV }}
+        package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+        publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE_DEV }} # Remove publish-profile to use Azure RBAC
         scm-do-build-during-deployment: true
         enable-oryx-build: true
