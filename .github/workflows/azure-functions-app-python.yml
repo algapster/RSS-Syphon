@@ -55,7 +55,7 @@ jobs:
         popd
 
     - name: 'Run Azure Functions Action Prod'
-      if: ${{ github.ref == 'refs/head/main' }}
+      if: ${{ github.ref == 'refs/heads/main' }}
       uses: Azure/functions-action@v1
       id: fa-prd
       with:
@@ -66,7 +66,7 @@ jobs:
         enable-oryx-build: true
 
     - name: 'Run Azure Functions Action Dev'
-      if: ${{ github.ref == 'refs/head/development' }}
+      if: ${{ github.ref == 'refs/heads/development' }}
       uses: Azure/functions-action@v1
       id: fa-dev
       with:
