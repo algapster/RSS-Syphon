@@ -170,14 +170,8 @@ keywords = {
         "webex",
         "wiline",
         "windows",
-        "winscp",
-        "workspace",
-        "yubikey",
-        "zoom",
-        "zscaler",
-        "openai",
-        "wmvare"
-
-
+        "windows 10",
+        "windows 11",
+        "zoom"
     ]
 }
