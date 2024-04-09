@@ -89,7 +89,6 @@ keywords = {
         "apple",
         "arin",
         "aruba",
-        "autoptimize",
         "aws",
         "azure",
         "beyond trust",
