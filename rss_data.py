@@ -97,7 +97,6 @@ keywords = {
         "cisco",
         "code42",
         "connectwise",
-        "crash plan",
         "debian",
         "defender",
         "dell",
