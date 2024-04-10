@@ -23,6 +23,7 @@ def init_slack_client(slack_token):
 
 
 def read_channel(client, channel_id, rss_type, pages_to_read):
+    
     """
     Reads channel conversations and returns matching content
 
@@ -56,10 +57,12 @@ def read_channel(client, channel_id, rss_type, pages_to_read):
         result = client.conversations_history(channel=channel_id)
         conversation_history.extend(result["messages"])
 
-        while result["response_metadata"]["next_cursor"] is not None and pages_to_read > 0:
-          result = client.conversations_history(channel=channel_id, cursor=result["response_metadata"]["next_cursor"])
-          conversation_history.extend(result["messages"])
-          pages_to_read = pages_to_read - 1
+        while next_cursor and pages_to_read > 0:
+          result = client.conversations_history(channel=channel_id, cursor=next_cursor) 
+          messages.extend(result.get("messages", []))
+          response_metadata = result.get("response_metadata", {})
+          next_cursor = response_metadata.get("next_cursor")
+          pages_to_read -= 1
 
         # Initialize dict and lists for storing links/md5s
         re_link = []
