@@ -23,6 +23,7 @@ def init_slack_client(slack_token):
 
 
 def read_channel(client, channel_id, rss_type, pages_to_read):
+    
     """
     Reads channel conversations and returns matching content
 
@@ -54,17 +55,12 @@ def read_channel(client, channel_id, rss_type, pages_to_read):
     try:
         conversation_history = []
         result = client.conversations_history(channel=channel_id)
-        if 'messages' in result:
-            conversation_history.extend(result["messages"])
-        
-        next_cursor = result.get("response_metadata", {}).get("next_cursor")
+        conversation_history.extend(result["messages"])
 
-        while next_cursor and pages_to_read > 0:
-            result = client.conversations_history(channel=channel_id, cursor=next_cursor)
-            if 'messages' in result:
-                conversation_history.extend(result["messages"])
-            next_cursor = result.get("response_metadata", {}).get("next_cursor")
-            pages_to_read -= 1
+        while result["response_metadata"]["next_cursor"] is not None and pages_to_read > 0:
+          result = client.conversations_history(channel=channel_id, cursor=result["response_metadata"]["next_cursor"])
+          conversation_history.extend(result["messages"])
+          pages_to_read = pages_to_read - 1
 
         # Process extracted messages to find links and MD5 hashes
         re_link = []
