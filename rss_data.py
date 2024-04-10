@@ -30,9 +30,6 @@ rss_feed_list = {
         {"name": "msrc.microsoft", "url": "https://msrc.microsoft.com/blog/feed"}
     ],
     "cve": [
-        {"name": "cvefeed_high", "url": "https://cvefeed.io/rssfeed/severity/high.xml"},
-        {"name": "cvefeed", "url": "https://cvefeed.io/rssfeed/latest.xml"},
-        {"name": "tenable", "url": "https://www.tenable.com/cve/feeds?sort=newest"},
         {"name": "esecurityplanet", "url": "https://www.esecurityplanet.com/feed/"},
         {"name": "helpnetsecurity", "url": "https://www.helpnetsecurity.com/feed/"},
         {"name": "secpod", "url": "https://www.secpod.com/blog/feed/"},
@@ -89,7 +86,6 @@ keywords = {
         "apple",
         "arin",
         "aruba",
-        "autoptimize",
         "aws",
         "azure",
         "beyond trust",
@@ -101,7 +97,6 @@ keywords = {
         "cisco",
         "code42",
         "connectwise",
-        "crash plan",
         "debian",
         "defender",
         "dell",
