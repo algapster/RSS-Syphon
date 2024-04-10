@@ -54,24 +54,29 @@ def read_channel(client, channel_id, rss_type, pages_to_read):
     try:
         conversation_history = []
         result = client.conversations_history(channel=channel_id)
-        conversation_history.extend(result["messages"])
+        if 'messages' in result:
+            conversation_history.extend(result["messages"])
+        
+        next_cursor = result.get("response_metadata", {}).get("next_cursor")
 
-        while result["response_metadata"]["next_cursor"] is not None and pages_to_read > 0:
-          result = client.conversations_history(channel=channel_id, cursor=result["response_metadata"]["next_cursor"])
-          conversation_history.extend(result["messages"])
-          pages_to_read = pages_to_read - 1
+        while next_cursor and pages_to_read > 0:
+            result = client.conversations_history(channel=channel_id, cursor=next_cursor)
+            if 'messages' in result:
+                conversation_history.extend(result["messages"])
+            next_cursor = result.get("response_metadata", {}).get("next_cursor")
+            pages_to_read -= 1
 
-        # Initialize dict and lists for storing links/md5s
+        # Process extracted messages to find links and MD5 hashes
         re_link = []
-        link_regex = r"(?:link\:.+?)(https?:\/\/(?:www\.)?[-a-zA-Z-1-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*))"
-        re_results = re.findall(link_regex, str(conversation_history), re.IGNORECASE)
+        link_regex = re.compile(r"(?:link\:.+?)(https?:\/\/(?:www\.)?[-a-zA-Z-1-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*))", re.IGNORECASE)
+        re_results = link_regex.findall(str(conversation_history))
         for re_result in re_results:
             if re_result not in re_link:
                 re_link.append(re_result)
 
         re_md5 = []
-        md5_regex = r"(?:md5:\s)([a-f0-9]{32})"
-        re_results = re.findall(md5_regex, str(conversation_history), re.IGNORECASE)
+        md5_regex = re.compile(r"(?:md5:\s)([a-f0-9]{32})", re.IGNORECASE)
+        re_results = md5_regex.findall(str(conversation_history))
         for re_result in re_results:
             if re_result not in re_md5:
                 re_md5.append(re_result)
@@ -79,19 +84,19 @@ def read_channel(client, channel_id, rss_type, pages_to_read):
         already_fixed_list = []
         already_seen_list = []
 
-        # Save timestamp if cve
-        if rss_type == "cve":
-            cve_regex = r"(CVE-20[0-9]{2}-\d+)"
+        # Save data if job type is CVE
+        if rss_type.lower() == "cve":
+            cve_regex = re.compile(r"(CVE-20[0-9]{2}-\d+)", re.IGNORECASE)
 
             for dialog in conversation_history:
                 if "reactions" in dialog:
-                    if list(filter(lambda item: item['name'] == 'white_check_mark', dialog["reactions"])):
-                        cve_dialog_results = re.findall(cve_regex, str(dialog), re.IGNORECASE)
+                    if any(item['name'] == 'white_check_mark' for item in dialog.get("reactions", [])):
+                        cve_dialog_results = cve_regex.findall(str(dialog))
                         for dialog_result in cve_dialog_results:
                             if dialog_result not in already_fixed_list:
                                 already_fixed_list.append(dialog_result)
 
-            cve_convo_results = re.findall(cve_regex, str(conversation_history), re.IGNORECASE)
+            cve_convo_results = cve_regex.findall(str(conversation_history))
             for convo_result in cve_convo_results:
                 if convo_result not in already_seen_list:
                     already_seen_list.append(convo_result)
@@ -104,7 +109,7 @@ def read_channel(client, channel_id, rss_type, pages_to_read):
         }
 
     except SlackApiError as e:
-        msg = f"Error creating conversation: {e}"
+        msg = f"Error fetching conversation data: {e.response.get('error', 'Unknown error')}"
         logger.error(msg)
 
     return re_dict
