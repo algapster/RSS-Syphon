@@ -12,7 +12,7 @@ log_format = os.getenv("LOG_FORMAT", "%(levelname)s:%(name)s: %(message)s")
 slack_params_dict = {
     "slack_enabled": os.getenv("SLACK_ENABLED"),
     "slack_token": os.getenv("SLACK_TOKEN"),
-    "pages_to_read": os.getenv("SLACK_PAGES_TO_READ"),
+    "pages_to_read": os.getenv("SLACK_PAGES_TO_READ", 5),
     "channels": {
         "cve": os.getenv("SLACK_CHANNEL_CVE"),
         "news": os.getenv("SLACK_CHANNEL_NEWS"),
