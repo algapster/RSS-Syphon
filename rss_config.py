@@ -15,7 +15,8 @@ slack_params_dict = {
     "channels": {
         "cve": os.getenv("SLACK_CHANNEL_CVE"),
         "news": os.getenv("SLACK_CHANNEL_NEWS"),
-        "error": os.getenv("SLACK_CHANNEL_ERRORS")
+        "error": os.getenv("SLACK_CHANNEL_ERRORS"),
+        "pages_to_read": os.getenv("SLACK_PAGES_TO_READ", 5)        
     }
 }
 
