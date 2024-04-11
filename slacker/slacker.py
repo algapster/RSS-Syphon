@@ -55,6 +55,9 @@ def read_channel(client, channel_id, rss_type, pages_to_read):
     }
 
     try:
+        # Convert pages_to_read to an integer if it's not already
+        pages_to_read = int(pages_to_read)
+        
         conversation_history = []
         result = client.conversations_history(channel=channel_id)
         conversation_history.extend(result["messages"])
@@ -107,6 +110,10 @@ def read_channel(client, channel_id, rss_type, pages_to_read):
             "fixed_cves": already_fixed_list,
             "seen_cves": already_seen_list
         }
+
+    except ValueError:
+        logger.error("Invalid type for pages_to_read; must be an integer.")
+        return re_dict
 
     except SlackApiError as e:
         msg = f"Error fetching conversation data: {e.response.get('error', 'Unknown error')}"
