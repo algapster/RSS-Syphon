@@ -56,18 +56,20 @@ def read_channel(client, channel_id, rss_type, pages_to_read: str) -> dict:
 
     try:
         # Convert pages_to_read to an integer if it's not already
-        pages_to_read = int(pages_to_read)
-        
+             
         conversation_history = []
         result = client.conversations_history(channel=channel_id)
-        conversation_history.extend(result["messages"])
-        next_cursor = result["response_metadata"].get("next_cursor")  # Initialize next_cursor here
+        conversation_history.extend(result.get("messages", []))
+        
+        # Initialize next_cursor safely
+        next_cursor = result.get("response_metadata", {}).get("next_cursor")
 
         while next_cursor and pages_to_read > 0:  # Check if next_cursor is not empty and pages_to_read > 0
           result = client.conversations_history(channel=channel_id, cursor=next_cursor)
-          conversation_history.extend(result["messages"])
+          conversation_history.extend(result.get("messages", []))
           pages_to_read -= 1
-          next_cursor = result["response_metadata"].get("next_cursor")  # Update next_cursor after each API call
+          # Safely update next_cursor
+          next_cursor = result.get("response_metadata", {}).get("next_cursor")
 
         # Process extracted messages to find links and MD5 hashes
         re_link = []
@@ -111,12 +113,13 @@ def read_channel(client, channel_id, rss_type, pages_to_read: str) -> dict:
             "seen_cves": already_seen_list
         }
 
-    except ValueError as e:
-        logger.error(f"Invalid input for pages_to_read, needs to be an integer: {e}")
-        return re_dict
-
     except SlackApiError as e:
-        logger.error(f"Error fetching conversation data: {e.response.get('error', 'Unknown error')}")
+        msg = f"Error fetching conversation data: {e.response.get('error', 'Unknown error')}"
+        logger.error(msg)
+        return re_dict
+    except KeyError as e:
+        # This catches missing keys in the result dictionary
+        logger.error(f"Key error: {e} - likely missing in the API response.")
         return re_dict
 
     return re_dict
