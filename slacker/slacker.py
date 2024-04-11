@@ -22,7 +22,7 @@ def init_slack_client(slack_token):
     return WebClient(token=slack_token)
 
 
-def read_channel(client, channel_id, rss_type, pages_to_read):
+def read_channel(client, channel_id, rss_type, pages_to_read: str) -> dict:
     
     
     
@@ -66,7 +66,7 @@ def read_channel(client, channel_id, rss_type, pages_to_read):
         while next_cursor and pages_to_read > 0:  # Check if next_cursor is not empty and pages_to_read > 0
           result = client.conversations_history(channel=channel_id, cursor=next_cursor)
           conversation_history.extend(result["messages"])
-          pages_to_read = pages_to_read - 1
+          pages_to_read -= 1
           next_cursor = result["response_metadata"].get("next_cursor")  # Update next_cursor after each API call
 
         # Process extracted messages to find links and MD5 hashes
@@ -111,13 +111,13 @@ def read_channel(client, channel_id, rss_type, pages_to_read):
             "seen_cves": already_seen_list
         }
 
-    except ValueError:
-        logger.error("Invalid type for pages_to_read; must be an integer.")
+    except ValueError as e:
+        logger.error(f"Invalid input for pages_to_read, needs to be an integer: {e}")
         return re_dict
 
     except SlackApiError as e:
-        msg = f"Error fetching conversation data: {e.response.get('error', 'Unknown error')}"
-        logger.error(msg)
+        logger.error(f"Error fetching conversation data: {e.response.get('error', 'Unknown error')}")
+        return re_dict
 
     return re_dict
 
@@ -254,6 +254,7 @@ def send_message(job_type, message_params, matched, errors, check_stale_keywords
     :param errors: List of feeds that have an error
     :param check_stale_keywords: None or date
     """
+      
     # Check if module is enabled and bail out if not
     if str(message_params["slack_enabled"]).lower() == "false":
         logger.debug("Debug: Slack not enabled.")
@@ -261,8 +262,14 @@ def send_message(job_type, message_params, matched, errors, check_stale_keywords
 
     slack_token = message_params["slack_token"]
     slack_channel = message_params["channels"]
-    pages_to_read = message_params["pages_to_read"]
 
+    try:
+        pages_to_read = int(message_params["pages_to_read"])  # Convert pages_to_read to integer
+    except ValueError:
+        logger.error(f"pages_to_read should be an integer, got: {message_params['pages_to_read']}")
+        return  # Exit the function if conversion fails
+    
+   
     # Check if slack_token is set
     if slack_token:
         # Init Slack Client
