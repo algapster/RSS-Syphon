@@ -32,7 +32,6 @@ rss_feed_list = {
     ],
     "cve": [
         {"name": "esecurityplanet", "url": "https://www.esecurityplanet.com/feed/"},
-        {"name": "helpnetsecurity", "url": "https://www.helpnetsecurity.com/feed/"},
         {"name": "secpod", "url": "https://www.secpod.com/blog/feed/"},
         {"name": "tacsecurity", "url": "https://tacsecurity.com/feed/"},
         {"name": "Medium ", "url": "https://medium.com/feed/realmodelabs"},
