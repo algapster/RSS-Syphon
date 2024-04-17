@@ -51,7 +51,6 @@ rss_feed_list = {
         {"name": "Max Justicz", "url": "https://justi.cz/feed.xml"},
         {"name": "Blog of Osanda", "url": "https://osandamalith.com/feed/"},
         {"name": "The Exploit Laboratory", "url": "https://blog.exploitlab.net/feeds/posts/default"},
-        {"name": "Linux Audit", "url": "https://linux-audit.com/feed/"},
         {"name": "The Human Machine Interface", "url": "https://h0mbre.github.io/feed.xml"},
         {"name": "Trail of Bits Blog", "url": "https://blog.trailofbits.com/feed/"},
         {"name": "Exodus Intelligence", "url": "https://blog.exodusintel.com/feed/"},
@@ -73,15 +72,12 @@ rss_feed_list = {
         {"name": "Windows Internals Blog", "url": "https://windows-internals.com/feed/"},
         {"name": "nist-analyzed", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss-analyzed.xml"},
         {"name": "nist-upcoming", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml"},
-        {"name": "zdi-upcoming", "url": "https://www.zerodayinitiative.com/rss/upcoming/"},
-        {"name": "zdi-analyzed", "url": "https://www.zerodayinitiative.com/rss/published/"},
         {"name": "vulners", "url": "https://vulners.com/rss.xml"},
         {"name": "seclists-bugtraq", "url": "https://seclists.org/rss/bugtraq.rss"},
         {"name": "seclists-full", "url": "https://seclists.org/rss/fulldisclosure.rss"},
         {"name": "seclists-oss", "url": "https://seclists.org/rss/oss-sec.rss"},
         {"name": "inthewild", "url": "https://raw.githubusercontent.com/gmatuz/inthewilddb/master/rss.xml"},
         {"name": "tenable", "url": "https://www.tenable.com/cve/feeds?sort=newest"},
-        {"name": "tenable-updated", "url": "https://www.tenable.com/cve/feeds?sort=updated"},
         {"name": "center-for-internet-security", "url": "https://www.cisecurity.org/feed/advisories"}
     ]
 }
@@ -97,7 +93,6 @@ keywords = {
         "apple",
         "arin",
         "aruba",
-        "aws",
         "azure",
         "beyond trust",
         "bomgar",
