@@ -88,7 +88,6 @@ keywords = {
         "hiring"
     ],
     "static_keywords": [
-        "amazon",
         "android",
         "apple",
         "arin",
@@ -131,7 +130,6 @@ keywords = {
         "juniper ",
         "knowbe4",
         "lenovo",
-        "linux",
         "lucid",
         "macbook",
         "macos",
