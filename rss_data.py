@@ -96,8 +96,6 @@ keywords = {
         "lastpass",
         "unifi",
         "intune",
-        "microsoft",
-        "windows",
         "windows 10",
         "windows 11"
     ]
