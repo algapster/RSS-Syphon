@@ -27,8 +27,7 @@ rss_feed_list = {
         {"name": "rapid7", "url": "https://blog.rapid7.com/rss/"},
         {"name": "checkpoint", "url": "https://research.checkpoint.com/feed/"},
         {"name": "isc.sans.edu", "url": "https://isc.sans.edu/rssfeed_full.xml"},
-        {"name": "msrc.microsoft", "url": "https://msrc.microsoft.com/blog/feed"},
-        
+        {"name": "msrc.microsoft", "url": "https://msrc.microsoft.com/blog/feed"}
     ],
     "cve": [
         {"name": "esecurityplanet", "url": "https://www.esecurityplanet.com/feed/"},
@@ -70,28 +69,18 @@ rss_feed_list = {
         {"name": "Corelan Team", "url": "https://www.corelan.be/index.php/feed/"},
         {"name": "NCC Group Research", "url": "https://research.nccgroup.com/feed/"},
         {"name": "Alexander Popov", "url": "https://a13xp0p0v.github.io/feed.xml"},
-        {"name": "Windows Internals Blog", "url": "https://windows-internals.com/feed/"},
-        {"name": "nist-analyzed", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss-analyzed.xml"},
-        {"name": "nist-upcoming", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml"},
-        {"name": "zdi-upcoming", "url": "https://www.zerodayinitiative.com/rss/upcoming/"},
-        {"name": "zdi-analyzed", "url": "https://www.zerodayinitiative.com/rss/published/"},
-        {"name": "vulners", "url": "https://vulners.com/rss.xml"},
-        {"name": "seclists-bugtraq", "url": "https://seclists.org/rss/bugtraq.rss"},
-        {"name": "seclists-full", "url": "https://seclists.org/rss/fulldisclosure.rss"},
-        {"name": "seclists-oss", "url": "https://seclists.org/rss/oss-sec.rss"},
-        {"name": "inthewild", "url": "https://raw.githubusercontent.com/gmatuz/inthewilddb/master/rss.xml"},
-        {"name": "tenable", "url": "https://www.tenable.com/cve/feeds?sort=newest"},
-        {"name": "tenable-updated", "url": "https://www.tenable.com/cve/feeds?sort=updated"},
-        {"name": "center-for-internet-security", "url": "https://www.cisecurity.org/feed/advisories"}
+        {"name": "Windows Internals Blog", "url": "https://windows-internals.com/feed/"}
     ]
 }
 
 keywords = {
-    "last_modified": "2024-04-10",
+    "last_modified": "2024-03-18",
     "ignored": [
         "hiring"
     ],
     "static_keywords": [
+        "adobe",
+        "airmagnet survey ",
         "amazon",
         "android",
         "apple",
@@ -108,6 +97,7 @@ keywords = {
         "cisco",
         "code42",
         "connectwise",
+        "debian",
         "defender",
         "dell",
         "designcad",
@@ -134,6 +124,7 @@ keywords = {
         "ivanti",
         "jamf",
         "juniper ",
+        "jwt",
         "knowbe4",
         "lenovo",
         "linux",
@@ -147,12 +138,15 @@ keywords = {
         "office",
         "nessus",
         "netapp",
+        "notepad++",
         "office365",
         "okta",
         "palo alto",
         "parallels",
         "paycor",
+        "pluralsight",
         "pulse secure",
+        "putty",
         "pycharm",
         "rapidfire",
         "ricoh",

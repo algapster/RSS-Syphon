@@ -22,7 +22,7 @@ def init_slack_client(slack_token):
     return WebClient(token=slack_token)
 
 
-def read_channel(client, channel_id, rss_type, pages_to_read):
+def read_channel(client, channel_id, rss_type):
     """
     Reads channel conversations and returns matching content
 
@@ -52,14 +52,12 @@ def read_channel(client, channel_id, rss_type, pages_to_read):
     }
 
     try:
-        conversation_history = []
+        # Call the conversations.history method using the WebClient
+        # The conversations.history returns 99 messages by default
+        # Results are paginated, see: https://api.slack.com/method/conversations.history$pagination
+        # TODO handle paginating multiple pages
         result = client.conversations_history(channel=channel_id)
-        conversation_history.extend(result["messages"])
-
-        while result["response_metadata"]["next_cursor"] is not None and pages_to_read > 0:
-          result = client.conversations_history(channel=channel_id, cursor=result["response_metadata"]["next_cursor"])
-          conversation_history.extend(result["messages"])
-          pages_to_read = pages_to_read - 1
+        conversation_history = result["messages"]
 
         # Initialize dict and lists for storing links/md5s
         re_link = []
@@ -249,7 +247,6 @@ def send_message(job_type, message_params, matched, errors, check_stale_keywords
 
     slack_token = message_params["slack_token"]
     slack_channel = message_params["channels"]
-    pages_to_read = message_params["pages_to_read"]
 
     # Check if slack_token is set
     if slack_token:
@@ -257,7 +254,7 @@ def send_message(job_type, message_params, matched, errors, check_stale_keywords
         slack_client = init_slack_client(slack_token)
 
         # Pull RSS that was found already in channel
-        rss_found = read_channel(slack_client, slack_channel[job_type], job_type, pages_to_read)
+        rss_found = read_channel(slack_client, slack_channel[job_type], job_type)
 
         # Build the message that will be sent
         message_body = build_results_message(matched, rss_found, job_type)
