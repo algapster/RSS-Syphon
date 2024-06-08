@@ -85,21 +85,11 @@ rss_feed_list = {
 }
 
 keywords = {
-<<<<<<< HEAD
     "last_modified": "2024-04-11",
-=======
-    "last_modified": "2024-03-18",
->>>>>>> parent of 2dc8392 (Update pagination function)
     "ignored": [
         "hiring"
     ],
     "static_keywords": [
-<<<<<<< HEAD
-=======
-        "adobe",
-        "airmagnet survey ",
-        "amazon",
->>>>>>> parent of 2dc8392 (Update pagination function)
         "android",
         "apple",
         "arin",
@@ -154,12 +144,6 @@ keywords = {
         "palo alto",
         "parallels",
         "paycor",
-<<<<<<< HEAD
-=======
-        "pluralsight",
-        "pulse secure",
-        "putty",
->>>>>>> parent of 2dc8392 (Update pagination function)
         "pycharm",
         "rapidfire",
         "salesforce",

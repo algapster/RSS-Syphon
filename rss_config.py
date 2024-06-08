@@ -17,11 +17,9 @@ slack_params_dict = {
     "channels": {
         "cve": os.getenv("SLACK_CHANNEL_CVE"),
         "news": os.getenv("SLACK_CHANNEL_NEWS"),
-<<<<<<< HEAD
-        "error": os.getenv("SLACK_CHANNEL_ERRORS")            
-=======
         "error": os.getenv("SLACK_CHANNEL_ERRORS")
->>>>>>> parent of 2dc8392 (Update pagination function)
+        "pages_to_read": os.getenv("SLACK_PAGES_TO_READ", 5)      
+
     }
 }
 

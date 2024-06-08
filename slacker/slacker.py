@@ -22,14 +22,10 @@ def init_slack_client(slack_token):
     return WebClient(token=slack_token)
 
 
-<<<<<<< HEAD
-def read_channel(client, channel_id, rss_type, pages_to_read: str) -> dict:
+def read_channel(client, channel_id, rss_type, pages_to_read):
     
     
     
-=======
-def read_channel(client, channel_id, rss_type):
->>>>>>> parent of 2dc8392 (Update pagination function)
     """
     Reads channel conversations and returns matching content
 
@@ -59,30 +55,19 @@ def read_channel(client, channel_id, rss_type):
     }
 
     try:
-<<<<<<< HEAD
         # Convert pages_to_read to an integer if it's not already
              
         conversation_history = []
         result = client.conversations_history(channel=channel_id)
-        conversation_history.extend(result.get("messages", []))
+        conversation_history.extend(result["messages"])
         
-        # Initialize next_cursor safely
-        next_cursor = result.get("response_metadata", {}).get("next_cursor")
+        while result["response_metadata"]["next_cursor"] is not None and pages_to_read > 0:
+          result = client.conversations_history(channel=channel_id, cursor=result["response_metadata"]["next_cursor"])
+          conversation_history.extend(result["messages"])
+          pages_to_read = pages_to_read - 1
 
-        while next_cursor and pages_to_read > 0:  # Check if next_cursor is not empty and pages_to_read > 0
-          result = client.conversations_history(channel=channel_id, cursor=next_cursor)
-          conversation_history.extend(result.get("messages", []))
-          pages_to_read -= 1
           # Safely update next_cursor
           next_cursor = result.get("response_metadata", {}).get("next_cursor")
-=======
-        # Call the conversations.history method using the WebClient
-        # The conversations.history returns 99 messages by default
-        # Results are paginated, see: https://api.slack.com/method/conversations.history$pagination
-        # TODO handle paginating multiple pages
-        result = client.conversations_history(channel=channel_id)
-        conversation_history = result["messages"]
->>>>>>> parent of 2dc8392 (Update pagination function)
 
         # Process extracted messages to find links and MD5 hashes
         re_link = []
@@ -278,6 +263,7 @@ def send_message(job_type, message_params, matched, errors, check_stale_keywords
 
     slack_token = message_params["slack_token"]
     slack_channel = message_params["channels"]
+    pages_to_read = message_params["pages_to_read"]
 
     try:
         pages_to_read = int(message_params["pages_to_read"])  # Convert pages_to_read to integer
@@ -292,7 +278,7 @@ def send_message(job_type, message_params, matched, errors, check_stale_keywords
         slack_client = init_slack_client(slack_token)
 
         # Pull RSS that was found already in channel
-        rss_found = read_channel(slack_client, slack_channel[job_type], job_type)
+         rss_found = read_channel(slack_client, slack_channel[job_type], job_type, pages_to_read)
 
         # Build the message that will be sent
         message_body = build_results_message(matched, rss_found, job_type)
