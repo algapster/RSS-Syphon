@@ -31,7 +31,6 @@ rss_feed_list = {
     ],
     "cve": [
         {"name": "esecurityplanet", "url": "https://www.esecurityplanet.com/feed/"},
-        {"name": "helpnetsecurity", "url": "https://www.helpnetsecurity.com/feed/"},
         {"name": "secpod", "url": "https://www.secpod.com/blog/feed/"},
         {"name": "tacsecurity", "url": "https://tacsecurity.com/feed/"},
         {"name": "Medium ", "url": "https://medium.com/feed/realmodelabs"},
@@ -50,7 +49,6 @@ rss_feed_list = {
         {"name": "Max Justicz", "url": "https://justi.cz/feed.xml"},
         {"name": "Blog of Osanda", "url": "https://osandamalith.com/feed/"},
         {"name": "The Exploit Laboratory", "url": "https://blog.exploitlab.net/feeds/posts/default"},
-        {"name": "Linux Audit", "url": "https://linux-audit.com/feed/"},
         {"name": "The Human Machine Interface", "url": "https://h0mbre.github.io/feed.xml"},
         {"name": "Trail of Bits Blog", "url": "https://blog.trailofbits.com/feed/"},
         {"name": "Exodus Intelligence", "url": "https://blog.exodusintel.com/feed/"},
@@ -69,28 +67,46 @@ rss_feed_list = {
         {"name": "Corelan Team", "url": "https://www.corelan.be/index.php/feed/"},
         {"name": "NCC Group Research", "url": "https://research.nccgroup.com/feed/"},
         {"name": "Alexander Popov", "url": "https://a13xp0p0v.github.io/feed.xml"},
+<<<<<<< HEAD
         {"name": "Windows Internals Blog", "url": "https://windows-internals.com/feed/"}
+=======
+        {"name": "Windows Internals Blog", "url": "https://windows-internals.com/feed/"},
+        {"name": "nist-analyzed", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss-analyzed.xml"},
+        {"name": "nist-upcoming", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml"},
+        {"name": "vulners", "url": "https://vulners.com/rss.xml"},
+        {"name": "seclists-bugtraq", "url": "https://seclists.org/rss/bugtraq.rss"},
+        {"name": "seclists-full", "url": "https://seclists.org/rss/fulldisclosure.rss"},
+        {"name": "seclists-oss", "url": "https://seclists.org/rss/oss-sec.rss"},
+        {"name": "inthewild", "url": "https://raw.githubusercontent.com/gmatuz/inthewilddb/master/rss.xml"},
+        {"name": "tenable", "url": "https://www.tenable.com/cve/feeds?sort=newest"},
+        {"name": "center-for-internet-security", "url": "https://www.cisecurity.org/feed/advisories"}
+>>>>>>> f83e8351d33bc12b10bb7ea660e204e4f68d736c
     ]
 }
 
 keywords = {
+<<<<<<< HEAD
     "last_modified": "2024-03-18",
+=======
+    "last_modified": "2024-04-11",
+>>>>>>> f83e8351d33bc12b10bb7ea660e204e4f68d736c
     "ignored": [
         "hiring"
     ],
     "static_keywords": [
+<<<<<<< HEAD
         "adobe",
         "airmagnet survey ",
         "amazon",
+=======
+>>>>>>> f83e8351d33bc12b10bb7ea660e204e4f68d736c
         "android",
         "apple",
         "arin",
         "aruba",
-        "aws",
         "azure",
         "beyond trust",
         "bomgar",
-        "centos",
         "centrify",
         "checkmk",
         "chrome",
@@ -99,15 +115,10 @@ keywords = {
         "connectwise",
         "debian",
         "defender",
-        "dell",
         "designcad",
         "digicert",
         "docusign",
         "duo",
-        "fortianalyzer",
-        "forticloud",
-        "fortigate",
-        "fortimanager",
         "fortinet",
         "fortiswitch",
         "google",
@@ -127,7 +138,6 @@ keywords = {
         "jwt",
         "knowbe4",
         "lenovo",
-        "linux",
         "lucid",
         "macbook",
         "macos",
@@ -144,30 +154,23 @@ keywords = {
         "palo alto",
         "parallels",
         "paycor",
+<<<<<<< HEAD
         "pluralsight",
         "pulse secure",
         "putty",
+=======
+>>>>>>> f83e8351d33bc12b10bb7ea660e204e4f68d736c
         "pycharm",
         "rapidfire",
-        "ricoh",
-        "rubrick",
         "salesforce",
         "secret server",
-        "sentinel",
         "slack",
         "sonicwall",
         "supermicro",
         "synnex",
-        "ubuntu",
-        "vcenter",
-        "veeam",
-        "vmware",
-        "vsphere",
         "webex",
         "wiline",
         "windows",
-        "windows 10",
-        "windows 11",
         "zoom"
     ]
 }
