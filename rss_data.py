@@ -27,8 +27,7 @@ rss_feed_list = {
         {"name": "rapid7", "url": "https://blog.rapid7.com/rss/"},
         {"name": "checkpoint", "url": "https://research.checkpoint.com/feed/"},
         {"name": "isc.sans.edu", "url": "https://isc.sans.edu/rssfeed_full.xml"},
-        {"name": "msrc.microsoft", "url": "https://msrc.microsoft.com/blog/feed"},
-        
+        {"name": "msrc.microsoft", "url": "https://msrc.microsoft.com/blog/feed"}
     ],
     "cve": [
         {"name": "esecurityplanet", "url": "https://www.esecurityplanet.com/feed/"},
@@ -68,6 +67,7 @@ rss_feed_list = {
         {"name": "Corelan Team", "url": "https://www.corelan.be/index.php/feed/"},
         {"name": "NCC Group Research", "url": "https://research.nccgroup.com/feed/"},
         {"name": "Alexander Popov", "url": "https://a13xp0p0v.github.io/feed.xml"},
+<<<<<<< HEAD
         {"name": "Windows Internals Blog", "url": "https://windows-internals.com/feed/"},
         {"name": "nist-analyzed", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss-analyzed.xml"},
         {"name": "nist-upcoming", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml"},
@@ -78,15 +78,28 @@ rss_feed_list = {
         {"name": "inthewild", "url": "https://raw.githubusercontent.com/gmatuz/inthewilddb/master/rss.xml"},
         {"name": "tenable", "url": "https://www.tenable.com/cve/feeds?sort=newest"},
         {"name": "center-for-internet-security", "url": "https://www.cisecurity.org/feed/advisories"}
+=======
+        {"name": "Windows Internals Blog", "url": "https://windows-internals.com/feed/"}
+>>>>>>> parent of 2dc8392 (Update pagination function)
     ]
 }
 
 keywords = {
+<<<<<<< HEAD
     "last_modified": "2024-04-11",
+=======
+    "last_modified": "2024-03-18",
+>>>>>>> parent of 2dc8392 (Update pagination function)
     "ignored": [
         "hiring"
     ],
     "static_keywords": [
+<<<<<<< HEAD
+=======
+        "adobe",
+        "airmagnet survey ",
+        "amazon",
+>>>>>>> parent of 2dc8392 (Update pagination function)
         "android",
         "apple",
         "arin",
@@ -100,6 +113,7 @@ keywords = {
         "cisco",
         "code42",
         "connectwise",
+        "debian",
         "defender",
         "designcad",
         "digicert",
@@ -121,6 +135,7 @@ keywords = {
         "ivanti",
         "jamf",
         "juniper ",
+        "jwt",
         "knowbe4",
         "lenovo",
         "lucid",
@@ -133,11 +148,18 @@ keywords = {
         "office",
         "nessus",
         "netapp",
+        "notepad++",
         "office365",
         "okta",
         "palo alto",
         "parallels",
         "paycor",
+<<<<<<< HEAD
+=======
+        "pluralsight",
+        "pulse secure",
+        "putty",
+>>>>>>> parent of 2dc8392 (Update pagination function)
         "pycharm",
         "rapidfire",
         "salesforce",
