@@ -20,7 +20,7 @@ name: Deploy Python project to Azure Function App
 
 on:
   push:
-    branches: ["main", "development"]
+    branches: ["main", "development", "syphon_pharma_prod"]
 
 env:
   AZURE_FUNCTIONAPP_NAME: 'RSS-syphon'   # set this to your function app name on Azure
