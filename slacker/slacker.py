@@ -14,6 +14,7 @@ def read_channel(client, channel_id, rss_type, pages_to_read):
     
     try:
         conversation_history = []
+        pages_to_read = int(pages_to_read)  # Ensure pages_to_read is an integer
         result = client.conversations_history(channel=channel_id)
         conversation_history.extend(result["messages"])
         
