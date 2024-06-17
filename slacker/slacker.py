@@ -55,11 +55,11 @@ def read_channel(client, channel_id, rss_type, pages_to_read):
     try:
         conversation_history = []
         result = client.conversations_history(channel=channel_id)
-        conversation_history.extend(result.get ("message",[])
+        conversation_history.extend(result["messages"])
 
-        while result.get("response_metadata",{}).get("next_cursor") and pages_to_read > 0:
+        while result["response_metadata"]["next_cursor"] is not None and pages_to_read > 0:
           result = client.conversations_history(channel=channel_id, cursor=result["response_metadata"]["next_cursor"])
-          conversation_history.extend(result.get("messages", []))
+          conversation_history.extend(result["messages"])
           pages_to_read = pages_to_read - 1
 
         # Process extracted messages to find links and MD5 hashes
