@@ -27,12 +27,10 @@ rss_feed_list = {
         {"name": "rapid7", "url": "https://blog.rapid7.com/rss/"},
         {"name": "checkpoint", "url": "https://research.checkpoint.com/feed/"},
         {"name": "isc.sans.edu", "url": "https://isc.sans.edu/rssfeed_full.xml"},
-        {"name": "msrc.microsoft", "url": "https://msrc.microsoft.com/blog/feed"},
-        
+        {"name": "msrc.microsoft", "url": "https://msrc.microsoft.com/blog/feed"}
     ],
     "cve": [
         {"name": "esecurityplanet", "url": "https://www.esecurityplanet.com/feed/"},
-        {"name": "helpnetsecurity", "url": "https://www.helpnetsecurity.com/feed/"},
         {"name": "secpod", "url": "https://www.secpod.com/blog/feed/"},
         {"name": "tacsecurity", "url": "https://tacsecurity.com/feed/"},
         {"name": "Medium ", "url": "https://medium.com/feed/realmodelabs"},
@@ -82,7 +80,7 @@ rss_feed_list = {
 }
 
 keywords = {
-    "last_modified": "2024-04-11",
+    "last_modified": "2024-06-13",
     "ignored": [
         "hiring"
     ],
