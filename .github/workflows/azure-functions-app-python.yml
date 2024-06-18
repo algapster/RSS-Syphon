@@ -87,3 +87,14 @@ jobs:
         publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE_PHARMA }} # Remove publish-profile to use Azure RBAC
         scm-do-build-during-deployment: true
         enable-oryx-build: true
+        
+    - name: 'Run Azure Functions Action Alamar'
+      if: ${{ github.ref == 'refs/heads/syphon_alamar_prod' }}
+      uses: Azure/functions-action@v1
+      id: fa-alamar
+      with:
+        app-name: ${{ env.AZURE_FUNCTIONAPP_NAME_ALAMAR }}
+        package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+        publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE_ALAMAR }} # Remove publish-profile to use Azure RBAC
+        scm-do-build-during-deployment: true
+        enable-oryx-build: true
