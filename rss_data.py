@@ -80,21 +80,29 @@ rss_feed_list = {
 }
 
 keywords = {
-    "last_modified": "2024-06-13",
+    "last_modified": "2024-06-17",
     "ignored": [
         "hiring"
     ],
     "static_keywords": [
         "365",
+        "aws",
+        "duende",
+        "sql",
+        "asp.net",
+        "salesforce",
+        "oracle",
+        "netsuite",
+        "insperity",
         "ms365 ",
-        "one drive",
-        "sharepoint ",
-        "defender  ",
-        "duo",
-        "lastpass",
-        "unifi",
-        "intune",
-        "windows 10",
-        "windows 11"
+        "fortinet",
+        "okta",
+        "carbonblack",
+        "workspace one",
+        "azure",
+        "vmware",
+        "veeam",
+        "synology"
+        "netapp"
     ]
 }
