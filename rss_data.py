@@ -103,6 +103,7 @@ keywords = {
         "vmware",
         "veeam",
         "synology"
-        "netapp"
+        "netapp",
+        "esx"
     ]
 }
