@@ -67,6 +67,7 @@ rss_feed_list = {
         {"name": "Corelan Team", "url": "https://www.corelan.be/index.php/feed/"},
         {"name": "NCC Group Research", "url": "https://research.nccgroup.com/feed/"},
         {"name": "Alexander Popov", "url": "https://a13xp0p0v.github.io/feed.xml"},
+        {"name": "Windows Internals Blog", "url": "https://windows-internals.com/feed/"}
         {"name": "Windows Internals Blog", "url": "https://windows-internals.com/feed/"},
         {"name": "nist-analyzed", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss-analyzed.xml"},
         {"name": "nist-upcoming", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml"},
@@ -75,13 +76,13 @@ rss_feed_list = {
         {"name": "seclists-full", "url": "https://seclists.org/rss/fulldisclosure.rss"},
         {"name": "seclists-oss", "url": "https://seclists.org/rss/oss-sec.rss"},
         {"name": "inthewild", "url": "https://raw.githubusercontent.com/gmatuz/inthewilddb/master/rss.xml"},
-        {"name": "tenable", "url": "https://www.tenable.com/cve/feeds?sort=newest"},
         {"name": "center-for-internet-security", "url": "https://www.cisecurity.org/feed/advisories"}
     ]
 }
 
 keywords = {
     "last_modified": "2024-06-13",
+
     "ignored": [
         "hiring"
     ],

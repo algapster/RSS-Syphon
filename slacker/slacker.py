@@ -9,9 +9,40 @@ logger = logging.getLogger(__name__)
 def init_slack_client(slack_token):
     return WebClient(token=slack_token)
 
+
 def read_channel(client, channel_id, rss_type, pages_to_read):
     re_dict = {"links": [], "md5s": [], "fixed_cves": [], "seen_cves": []}
     
+    try:
+
+    """
+    Reads channel conversations and returns matching content
+
+    This requires the following scopes:
+      channels:history
+        View messages and other content in public channels that syphon has been added to
+      groups:history
+        View messages and other content in private channels that syphon has been added to
+      im:history
+        View messages and other content in direct messages that syphon has been added to
+      incoming-webhook
+        Post messages to specific channels in Slack
+      mpim:history
+        View messages and other content in group direct messages that syphon has been added to
+
+    :param client: Slack Client Object
+    :param channel_id: Slack Channel ID
+    :param rss_type: CVE or NEWs job type
+    :return: Dictionary of content
+    """
+    # Set default return dict
+    re_dict = {
+        "links": [],
+        "md5s": [],
+        "fixed_cves": [],
+        "seen_cves": []
+    }
+
     try:
         conversation_history = []
         pages_to_read = int(pages_to_read)  # Ensure pages_to_read is an integer
