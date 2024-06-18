@@ -12,16 +12,13 @@ log_format = os.getenv("LOG_FORMAT", "%(levelname)s:%(name)s: %(message)s")
 slack_params_dict = {
     "slack_enabled": os.getenv("SLACK_ENABLED"),
     "slack_token": os.getenv("SLACK_TOKEN"),
-    "pages_to_read": os.getenv("SLACK_PAGES_TO_READ", 3),
+    "pages_to_read": os.getenv("SLACK_PAGES_TO_READ"),
     
     "channels": {
         "cve": os.getenv("SLACK_CHANNEL_CVE"),
         "news": os.getenv("SLACK_CHANNEL_NEWS"),
-<<<<<<< HEAD
+        "pages_to_read": os.getenv("SLACK_PAGES_TO_READ"),
         "error": os.getenv("SLACK_CHANNEL_ERRORS")
-=======
-        "error": os.getenv("SLACK_CHANNEL_ERRORS")            
->>>>>>> f83e8351d33bc12b10bb7ea660e204e4f68d736c
     }
 }
 
